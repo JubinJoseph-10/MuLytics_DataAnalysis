@@ -186,9 +186,9 @@ select_var_or = des_nom_.selectbox("Select a variable:", ['Follow-Up Count', 'Di
 
 des_nom_.write('\n')
 description = f"The following bar chart helps us visually understand the distribution of the ordinal variable {select_var_or}. By analyzing the frequency of each category, we can observe patterns in the data while maintaining the natural order of the variable. This visualization provides insights into the spread, central tendency, and any imbalances within the ordinal categories, aiding in a deeper understanding of the variable."
-
+des_nom_.write('\n')
 des_nom_.markdown("""<div style="text-align: justify; font-size: 14px">{}<ul>
-  <li style='font-size: 14px;'Null values were present in <b>days to install, days to accept and days to install request are imputed with an arbitrary value of 100</b> to showcase funnel breakage (Mean, Median/Mode Imputation would not have made sense since these are the binary cases).</li>
+  <li style='font-size: 14px;'>Null values were present in <b> days to install, days to accept and days to install request are imputed with an arbitrary value of 100</b> to showcase funnel breakage (Mean, Median/Mode Imputation would not have made sense since these are the binary cases).</li>
   <li style='font-size: 14px;'><b>Majority of the leads</b> experience <b>down time between 0 to 12 Hours.</b></li>
   <li style='font-size: 14px;'><b>Majority of the service hubs</b> are <b>located within the range 5 to 30 Kms from the leads.</b></b></li>
   <li style='font-size: 14px;'><b>Majority of the leads</b> are <b>followed up with, up to 5 times.</b></li>
