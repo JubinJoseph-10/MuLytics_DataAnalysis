@@ -110,7 +110,7 @@ select_var_cat = des_.selectbox("Select a variable:", ['City', 'Plan Type', 'Hou
 'Marketing Channel','Competitor Interest', 'Preferred Contact Time',
 'Customer Tech-Savviness', 'Decision Influence', 'Complaint History','Payment Mode Preferred', 
 'Payment Frequency', 'Bundled Service Interest', 'Competitor Price Sensitivity','Infrastructure Ready',
-'Preferred Communication Mode','Is Holiday', 'Festive Period', 'Signal Strength','Plan Cost (INR)','Time Spent on Research (Days)','Days to Accept'
+'Preferred Communication Mode','Is Holiday', 'Festive Period', 'Signal Strength','Plan Cost (INR)','Days to Accept'
                            ,'Days to Qualify','Days to Install Request',
                    'Installed'],key='2')
 
@@ -175,7 +175,7 @@ plot_space_nom,des_nom = ordinal_variables_dist.columns([.6,.4])
 des_nom_ = des_nom.container(border=True)
 des_nom_.write('\n')
 select_var_or = des_nom_.selectbox("Select a variable:", ['Follow-Up Count', 'Distance to Service Hub',
-                           'Network Downtime (Hours)','Service Quality Rating'],key='3')
+                           'Network Downtime (Hours)','Service Quality Rating','Time Spent on Research (Days)'],key='3')
 
 
 des_nom_.write('\n')
