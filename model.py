@@ -154,7 +154,7 @@ description = f'The following graphs help us understand the normality and distri
 
 des.markdown("""<div style="text-align: justify; font-size: 14px">{}'
              <ul>
-  <li style='font-size: 14px;'>Only two variables from the ones here we could see here had outliers. Which are the <b>Lifetime Value in INR</b> and <b>The Discount availed in INR</b>. To identify we used the upper and lower bounds as Q3 + 1.5 *(IQR) and Q1 - 1.5 *(IQR) respectively.</li>
+  <li style='font-size: 14px;'>Only two variables from the ones here we could see here had outliers. Which are the <b>Lifetime Value in INR</b> and <b>The Discount availed in INR</b>. To identify we used the <b>upper and lower bounds as Q3 + 1.5 *(IQR) and Q1 - 1.5 *(IQR) respectively.</b></li>
   <li style='font-size: 14px;'>Rest of the variables did not have significant number of outliers to be treated seperatly.</li>
 </ul></div>""".format(description),unsafe_allow_html=True)
 des.write('\n')
