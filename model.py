@@ -84,7 +84,9 @@ reserve_data = data.copy()
 
 ###################### SECTION ON DISTRIBUTION OF CATEGORICAL VARIABLES ######################
 #Testing the normality of the columns
-categorical_variables_dist = st.container(border=True)
+univariate_analysis = st.container(border=True)
+
+categorical_variables_dist = univariate_analysis.container(border=True)
 categorical_variables_dist.markdown('<div style="text-align: center; font-size: 18px">Exploring the distribution of Leads over the categorical variables</div>',unsafe_allow_html=True)
 categorical_variables_dist.write('\n')
 plot_space_cat,des_cat = categorical_variables_dist.columns([.6,.4])
@@ -136,7 +138,7 @@ plot_space_cat_.plotly_chart(pie_univariate,use_container_width=True)
 
 ###################### SECTION ON DISTRIBUTION OF CONTINUOS VARIABLES ######################
 #Testing the normality of the columns
-continuos_variables_dist = st.container(border=True)
+continuos_variables_dist = univariate_analysis.container(border=True)
 continuos_variables_dist.markdown('<div style="text-align: center; font-size: 16px">Exploring the distribution of the continuos variables</div>',unsafe_allow_html=True)
 continuos_variables_dist.write('\n')
 des_,plot_space = continuos_variables_dist.columns([.2,.8])
@@ -165,7 +167,7 @@ plot_box.plotly_chart(box,use_container_width=True)
 
 ###################### SECTION ON DISTRIBUTION OF ORDINAL VARIABLES ######################
 #Testing the normality of the columns
-ordinal_variables_dist = st.container(border=True)
+ordinal_variables_dist = univariate_analysis.container(border=True)
 ordinal_variables_dist.markdown('<div style="text-align: center; font-size: 16px">Exploring the distribution of the ordnial variables</div>',unsafe_allow_html=True)
 ordinal_variables_dist.write('\n')
 plot_space_nom,des_nom = ordinal_variables_dist.columns([.6,.4])
@@ -191,7 +193,7 @@ plot_space_nom_.plotly_chart(bar_chart_ord,use_container_width=True)
 
 ###################### SECTION ON DISTRIBUTION OF LEAD GENRATION DATES ######################
 #Testing the normality of the columns
-lead_generation_dates = st.container(border=True)
+lead_generation_dates = univariate_analysis.container(border=True)
 lead_generation_dates.markdown('<div style="text-align: center; font-size: 16px">Exploring the distribution of the leads over time</div>',unsafe_allow_html=True)
 lead_generation_dates.write('\n')
 lead_generation_dates_ = lead_generation_dates.container(border=True)
@@ -201,6 +203,9 @@ reserve_data['Lead Created Date'] = pd.to_datetime(reserve_data['Lead Created Da
 reserve_data['Month-Year'] = reserve_data['Lead Created Date'].dt.to_period('M')
 line_plot = px.line(reserve_data.groupby('Lead Created Date')['Lead ID'].count())
 lead_generation_dates_.plotly_chart(line_plot,use_container_width=True)
+
+
+
 
 
 ########################### Section for Bivariate Analysis ########################### 
