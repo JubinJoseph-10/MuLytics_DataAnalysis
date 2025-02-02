@@ -103,7 +103,9 @@ des_.markdown("""
                     <div style='text-align: justify;color:black;font-size:14px;'>Feel free to explore and play around and derive insights of your own, Some of our observations are given below:
 <ul>
   <li style='font-size: 14px;'>Based on household income level <b>50%</b> of our leads are from the medium household income and <b>30%</b> and <b>20%</b> from low and high</li>
-  <li style='font-size: 14px;'><b>77%</b> of all the Applcations are Content Rated <b>Everyone</b></li>
+  <li style='font-size: 14px;'>On Holidays and Fetstive Periods we generate <b>1%</b> and <b>25%</b> of leads respectively</li>  
+  <li style='font-size: 14px;'>Our installation rate across all the leads is <b>18%</b></li>
+  <li style='font-size: 14px;'>Apart from these variables we have equal distribution of leads</li>
 </ul></div>""",unsafe_allow_html=True)
 des_.write('\n')
 select_var_cat = des_.selectbox("Select a variable:", ['City', 'Plan Type', 'Household Income Level', 'Lead Source',
