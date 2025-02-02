@@ -22,11 +22,9 @@ from sklearn.model_selection import cross_val_score
 
 #setting page configs
 logo = Image.open("Data/page_favicon.png")
-st.set_page_config(page_icon=logo,layout='wide',page_title='App Ascend')
-
-
+st.set_page_config(page_icon=logo,layout='wide',page_title='Bandwidth to Buyers')
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.set_page_config(layout='wide')
+
 
 
 #reading data\
