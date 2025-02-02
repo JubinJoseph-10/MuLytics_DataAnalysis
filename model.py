@@ -21,7 +21,7 @@ from sklearn.model_selection import cross_val_score
 
 
 #setting page configs
-logo = Image.open("Images/page_favicon.png")
+logo = Image.open("Data/page_favicon.png")
 st.set_page_config(page_icon=logo,layout='wide',page_title='App Ascend')
 
 
