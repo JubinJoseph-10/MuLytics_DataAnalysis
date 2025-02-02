@@ -575,7 +575,7 @@ class_2_ = class_2.container(border=True)
 report = classification_report(y_test, pred_lr)
 # Display classification report with HTML formatting
 accuracy = accuracy_score(y_test, pred_lr)
-class_.write(f"Accuracy: {accuracy}")
+class_.write(f"Accuracy: {round(accuracy*100,2)}%")
 # Calculate additional metrics
 class_.text(report)
 class_.write('\n')
