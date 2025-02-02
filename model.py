@@ -179,12 +179,6 @@ plot_space_nom,des_nom = ordinal_variables_dist.columns([.6,.4])
 
 des_nom_ = des_nom.container(border=True)
 des_nom_.write('\n')
-select_var_or = des_nom_.selectbox("Select a variable:", ['Follow-Up Count', 'Distance to Service Hub',
-                           'Network Downtime (Hours)','Service Quality Rating','Time Spent on Research (Days)','Days to Accept'
-                           ,'Days to Qualify','Days to Install Request'],key='3')
-
-
-des_nom_.write('\n')
 description = f"The following bar chart helps us visually understand the distribution of the ordinal variable {select_var_or}. By analyzing the frequency of each category, we can observe patterns in the data while maintaining the natural order of the variable. This visualization provides insights into the spread, central tendency, and any imbalances within the ordinal categories, aiding in a deeper understanding of the variable."
 des_nom_.write('\n')
 des_nom_.markdown("""<div style="text-align: justify; font-size: 14px">{}<ul>
@@ -195,7 +189,9 @@ des_nom_.markdown("""<div style="text-align: justify; font-size: 14px">{}<ul>
 </ul></div>""".format(description), unsafe_allow_html=True)
 des_nom_.write('\n')
 
-
+select_var_or = des_nom_.selectbox("Select a variable:", ['Follow-Up Count', 'Distance to Service Hub',
+                           'Network Downtime (Hours)','Service Quality Rating','Time Spent on Research (Days)','Days to Accept'
+                           ,'Days to Qualify','Days to Install Request'],key='3')
 
 plot_space_nom_ = plot_space_nom.container(border=True)
 bar_chart_ord = px.bar(pd.DataFrame(reserve_data[select_var_or].value_counts()),y='count',
