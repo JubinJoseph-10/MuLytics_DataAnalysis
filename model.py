@@ -85,7 +85,7 @@ reserve_data = data.copy()
 ###################### SECTION ON DISTRIBUTION OF CATEGORICAL VARIABLES ######################
 #Testing the normality of the columns
 categorical_variables_dist = st.container(border=True)
-categorical_variables_dist.markdown('<div style="text-align: center; font-size: 16px">Exploring the distribution of the categorical variables</div>',unsafe_allow_html=True)
+categorical_variables_dist.markdown('<div style="text-align: center; font-size: 18px">Exploring the distribution of Leads over the categorical variables</div>',unsafe_allow_html=True)
 categorical_variables_dist.write('\n')
 plot_space_cat,des_cat = categorical_variables_dist.columns([.6,.4])
 
@@ -95,7 +95,7 @@ des_.write('\n')
 
 #description
 des_.markdown("""
-                    <div style='text-align: justify;color:black;font-size:14px;'>Before we dive deeper into determination of factors important to indicate installation, we take a look at the distribution of our leads. This helps us in understanding the leads and their tastes and peferences.</div>""",unsafe_allow_html=True)
+                    <div style='text-align: justify;color:black;font-size:14px;'>Understanding the distribution of leads helps us analyze trends, preferences, and potential market focus areas. Select a variable from the dropdown to explore how different categorical factors influence our data.</div>""",unsafe_allow_html=True)
 des_.write('\n')
 des_.markdown("""
                     <div style='text-align: justify;color:black;font-size:14px;'>Feel free to explore and play around and derive insights of your own, Some of our observations are given below:
