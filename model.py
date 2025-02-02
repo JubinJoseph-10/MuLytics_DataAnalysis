@@ -50,9 +50,9 @@ outlier_detector('Discount Availed (INR)',data,1.5)
 #removing the outliers from both marketing expense and the discount availed
 data = data[(data['Marketing Spend (INR) outlier']!=1)&(data['Discount Availed (INR) outlier']!=1)]
 #imputing the dates to accept, qualify and install
-data['Days to Accept'].fillna(100,inplace=True)
-data['Days to Qualify'].fillna(100,inplace=True)
-data['Days to Install Request'].fillna(100,inplace=True)
+data['Days to Accept'].fillna(60,inplace=True)
+data['Days to Qualify'].fillna(60,inplace=True)
+data['Days to Install Request'].fillna(60,inplace=True)
 data['Accepted'] = data['Days to Accept'].apply(lambda x : 0 if x==100 else 1)
 data['Qualified'] = data['Days to Qualify'].apply(lambda x : 0 if x==100 else 1)
 reserve_data = data.copy()
